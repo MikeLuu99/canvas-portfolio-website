@@ -201,8 +201,8 @@ export default function PortfolioFlow() {
       fitView
       fitViewOptions={{
         padding: 0.5,
-        minZoom: 1.5,
-        maxZoom: 1.5,
+        minZoom: window.innerWidth < 768 ? 0.6 : 1.25,
+        maxZoom: window.innerWidth < 768 ? 0.6 : 1.25,
       }}
     >
       <Background
