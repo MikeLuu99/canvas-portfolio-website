@@ -11,7 +11,7 @@ const detailsData = {
     {
       name: "Just Write",
       description: "A focused text editor",
-      url: "https://justwrite.yboard.ai",
+      url: "https://justwrite.mikeluu.xyz",
     },
     {
       name: "Search shortcuts",
