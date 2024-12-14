@@ -21,7 +21,7 @@ const detailsData = {
     {
       name: "AI Storyboard",
       description: "Generate storyboards with Diffusion Model",
-      url: "https://aistoryboardhf.streamlit.app/",
+      url: "https://aistoryboard.streamlit.app/",
     },
   ],
   Education: [
