@@ -12,6 +12,14 @@ import "reactflow/dist/style.css";
 import MainNode from "./MainNode";
 import DetailNode from "./DetailNode";
 
+const NODE_OFFSET = 400;
+const NODE_POSITIONS = {
+  Projects: { x: -0.9, y: 0 },
+  Education: { x: 1.05, y: 0 },
+  Experiences: { x: -0.9, y: 1/1.35 },
+  Contacts: { x: 1.05, y: 1/1.85 },
+} as const;
+
 const nodeTypes = {
   main: MainNode,
   detail: DetailNode,
@@ -139,12 +147,15 @@ export default function PortfolioFlow() {
           position: getNodePosition(section, mainNode.position),
         };
         // Create edge from main node to the new section node
-        setEdges(eds => [...eds, { 
-          id: `main-${section}`,
-          source: 'main',
-          target: section,
-          type: 'default'
-        }]);
+        setEdges((eds) => [
+          ...eds,
+          {
+            id: `main-${section}`,
+            source: "main",
+            target: section,
+            type: "default",
+          },
+        ]);
         return [...nds, newNode];
       });
     },
@@ -155,31 +166,13 @@ export default function PortfolioFlow() {
     section: string,
     mainPosition: { x: number; y: number },
   ) => {
-    const offset = 400;
-    switch (section) {
-      case "Projects":
-        return {
-          x: mainPosition.x - offset,
-          y: mainPosition.y - offset / 1.5,
-        };
-      case "Education":
-        return {
-          x: mainPosition.x + 1.15 * offset,
-          y: mainPosition.y - offset / 1.5,
-        };
-      case "Experiences":
-        return {
-          x: mainPosition.x - offset,
-          y: mainPosition.y + offset / 1.5,
-        };
-      case "Contacts":
-        return {
-          x: mainPosition.x + 1.15 * offset,
-          y: mainPosition.y + offset / 1.5,
-        };
-      default:
-        return { x: 0, y: 0 };
-    }
+    const position = NODE_POSITIONS[section as keyof typeof NODE_POSITIONS];
+    if (!position) return { x: 0, y: 0 };
+    
+    return {
+      x: mainPosition.x + position.x * NODE_OFFSET,
+      y: mainPosition.y + position.y * NODE_OFFSET,
+    };
   };
 
   useEffect(() => {

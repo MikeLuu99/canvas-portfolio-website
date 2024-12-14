@@ -18,6 +18,11 @@ const detailsData = {
       description: "Quick search on many websites",
       url: "https://chromewebstore.google.com/detail/search-shortcuts/imkjedockkilpeaglocpalmmfipiieak",
     },
+    {
+      name: "AI Storyboard",
+      description: "Generate storyboards with Diffusion Model",
+      url: "https://aistoryboardhf.streamlit.app/",
+    },
   ],
   Education: [
     {
@@ -63,7 +68,7 @@ function DetailNode({ data }: { data: { section: string } }) {
   const details = detailsData[data.section as keyof typeof detailsData] || [];
 
   return (
-    <div className="w-80 h-80 p-4 bg-white rounded-sm shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+    <div className="w-80 h-full p-4 bg-white rounded-sm shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
       <div className="text-lg mb-6 text-black font-title font-bold">
         {data.section}
       </div>
