@@ -16,8 +16,8 @@ const NODE_OFFSET = 400;
 const NODE_POSITIONS = {
   Projects: { x: -0.9, y: 0 },
   Education: { x: 1.05, y: 0 },
-  Experiences: { x: -0.9, y: 1/1.35 },
-  Contacts: { x: 1.05, y: 1/1.85 },
+  Experiences: { x: -0.9, y: 1 / 1.35 },
+  Contacts: { x: 1.05, y: 1 / 1.85 },
 } as const;
 
 const nodeTypes = {
@@ -71,8 +71,8 @@ const initialNodes: Node[] = [
               className="underline"
             >
               reading
-            </a>
-            . to be more &quot;intellectual&quot;.
+            </a>{" "}
+            to be more &quot;intellectual&quot;.
           </p>
           <hr className="my-4" />
           <p>
@@ -168,7 +168,7 @@ export default function PortfolioFlow() {
   ) => {
     const position = NODE_POSITIONS[section as keyof typeof NODE_POSITIONS];
     if (!position) return { x: 0, y: 0 };
-    
+
     return {
       x: mainPosition.x + position.x * NODE_OFFSET,
       y: mainPosition.y + position.y * NODE_OFFSET,
