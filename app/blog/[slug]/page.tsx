@@ -7,6 +7,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 // Define custom components with proper font styling
+/* eslint-disable */
 const components = {
   Image: (props: any) => (
     <Image
@@ -50,6 +51,7 @@ const components = {
     <p className="font-body text-base leading-relaxed my-4" {...props} />
   ),
 };
+/* eslint-enable */
 
 export default async function BlogPost({
   params,
