@@ -130,6 +130,7 @@ const initialNodes: Node[] = [
 export default function PortfolioFlow() {
   const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
   const [edges, setEdges, onEdgesChange] = useEdgesState([]);
+  const proOptions = { hideAttribution: true };
 
   const onSectionClick = useCallback(
     (section: string) => {
@@ -204,6 +205,7 @@ export default function PortfolioFlow() {
         minZoom: window.innerWidth < 768 ? 0.6 : 1.25,
         maxZoom: window.innerWidth < 768 ? 0.6 : 1.25,
       }}
+      proOptions={proOptions}
     >
       <Background
         variant={BackgroundVariant.Lines}
@@ -211,7 +213,7 @@ export default function PortfolioFlow() {
         color="#d2c9c0"
         style={{ backgroundColor: "#dfd6cc" }}
       />
-      <Controls />
+      {/* <Controls /> */}
     </ReactFlow>
   );
 }
