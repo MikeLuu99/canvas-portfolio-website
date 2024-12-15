@@ -1,4 +1,5 @@
 import { memo } from "react";
+import Link from "next/link";
 
 function MainNode({
   data,

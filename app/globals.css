@@ -76,3 +76,19 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+.prose {
+  @apply max-w-none;
+}
+
+.prose h1 {
+  @apply text-3xl font-bold mb-4 font-title;
+}
+
+.prose h2 {
+  @apply text-2xl font-bold mt-8 mb-4 font-title;
+}
+
+.prose p {
+  @apply mb-4 font-body;
+}

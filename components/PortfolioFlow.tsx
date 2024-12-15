@@ -56,7 +56,7 @@ const initialNodes: Node[] = [
           <p>
             I explore math and film music sometimes. I also try{" "}
             <a
-              href="https://yboard.substack.com/"
+              href="/blog"
               target="_blank"
               rel="noopener noreferrer"
               className="underline"
