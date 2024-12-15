@@ -11,8 +11,9 @@ export default function Home() {
   return (
     <main className="w-full h-screen">
       <h1 className="sr-only">
-        Mike Luu&apos;s Portfolio - Software Engineer, AI Developer, and Math
-        Enthusiast
+        Mike Luu&apos;s Portfolio - Computer Science Student, interested in
+        databases, automations, and AI. I explore math and film music sometimes.
+        I also try writing to be more intellectual.
       </h1>
       <Suspense fallback={<div>Loading...</div>}>
         <PortfolioFlow />
