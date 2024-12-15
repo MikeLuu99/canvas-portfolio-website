@@ -30,7 +30,10 @@ export default function BlogPage() {
       <h1 className="text-3xl font-title mb-8">Blog</h1>
       <div className="space-y-4">
         {posts.map((post) => (
-          <div key={post.slug} className="p-4 bg-white rounded-sm shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] border border-black">
+          <div
+            key={post.slug}
+            className="p-4 bg-white rounded-sm shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] border border-black"
+          >
             <Link
               href={`/blog/${post.slug}`}
               className="text-xl font-title hover:underline"
