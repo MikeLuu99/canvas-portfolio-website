@@ -4,12 +4,15 @@ import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Mike Luu",
-  description: "Mike Luu's developer portfolio",
+  title: "Mike Luu's Portfolio",
+  description:
+    "Learn more about me and my personal projects in in Software Engineering, AI, and Math via a canvas format.",
   keywords: [
+    "mike luu",
+    "mike",
+    "luu",
     "ai",
     "machine learning",
-    "software developer",
     "software engineer",
     "blog",
     "portfolio",
