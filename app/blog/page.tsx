@@ -2,6 +2,12 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Writings",
+  description: "Blog, writings, and thoughts.",
+};
 
 export default function BlogPage() {
   // Get all MDX files from the blog/posts directory
