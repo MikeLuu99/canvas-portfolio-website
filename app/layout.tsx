@@ -6,7 +6,14 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
   title: "Mike Luu",
   description: "Mike Luu's developer portfolio",
-  keywords: ["Mike Luu, Developer, Portfolio, Software, Canvas"],
+  keywords: [
+    "ai",
+    "machine learning",
+    "software developer",
+    "software engineer",
+    "blog",
+    "portfolio",
+  ],
   openGraph: {
     images:
       "https://media.licdn.com/dms/image/v2/D562DAQE0LLIvkPzZLQ/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1734208501757?e=1734836400&v=beta&t=WJ6obtBlYYIt7HW9wF112Ik9hpUMCf1XHIxKUY4Phtc",
