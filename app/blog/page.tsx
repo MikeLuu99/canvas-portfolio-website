@@ -27,7 +27,7 @@ export default function BlogPage() {
       >
         ← Back
       </Link>
-      <h1 className="text-3xl font-title mb-8">Blog</h1>
+      <h1 className="text-3xl font-title mb-8">Writings</h1>
       <div className="space-y-4">
         {posts.map((post) => (
           <div
