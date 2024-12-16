@@ -55,12 +55,7 @@ const initialNodes: Node[] = [
           <hr className="my-4" />
           <p>
             I explore math and film music sometimes. I also try{" "}
-            <a
-              href="/blog"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline"
-            >
+            <a href="/blog" className="underline">
               writing
             </a>{" "}
             and{" "}
