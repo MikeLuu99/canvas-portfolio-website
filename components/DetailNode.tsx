@@ -72,7 +72,7 @@ function DetailNode({ data }: { data: { section: string } }) {
       <div className="text-lg mb-6 text-black font-title font-bold">
         {data.section}
       </div>
-      <ul className="pl-5 font-body">
+      <ul className="pl-5 font-body text-black">
         {details.map((detail, index) => (
           <li key={index} className="text-xs mb-5">
             {typeof detail === "string" ? (
