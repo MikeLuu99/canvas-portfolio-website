@@ -74,37 +74,39 @@ export default async function BlogPost({
     const { data: frontMatter, content } = matter(fileContent);
 
     return (
-      <article className="max-w-2xl mx-auto p-4 dark:bg-black min-h-screen">
-        <ThemeToggle />
-        <Link
-          href="/blog"
-          className="inline-block mb-4 text-gray-500 hover:text-gray-700 dark:text-white dark:hover:text-gray-100 font-body"
-        >
-          ← Back
-        </Link>
-        <header className="mb-8">
-          <h1 className="text-3xl font-normal font-title mb-2 dark:text-white">
-            {frontMatter.title}
-          </h1>
-          <time className="text-gray-500 dark:text-gray-400 font-body">
-            {frontMatter.date}
-          </time>
-        </header>
-        <div className="prose prose-lg max-w-none prose-ul:my-6 prose-ol:my-6 prose-li:my-0 prose-headings:my-6 prose-headings:font-title prose-p:font-body prose-li:font-body dark:prose-invert">
-          <MDXRemote
-            source={content}
-            components={components}
-            options={{
-              parseFrontmatter: true,
-              mdxOptions: {
-                remarkPlugins: [],
-                rehypePlugins: [],
-                format: "mdx",
-              },
-            }}
-          />
-        </div>
-      </article>
+      <div className="dark:bg-black">
+        <article className="max-w-2xl mx-auto p-4 dark:bg-black min-h-screen">
+          <ThemeToggle />
+          <Link
+            href="/blog"
+            className="inline-block mb-4 text-gray-500 hover:text-gray-700 dark:text-white dark:hover:text-gray-100 font-body"
+          >
+            ← Back
+          </Link>
+          <header className="mb-8">
+            <h1 className="text-3xl font-normal font-title mb-2 dark:text-white">
+              {frontMatter.title}
+            </h1>
+            <time className="text-gray-500 dark:text-gray-400 font-body">
+              {frontMatter.date}
+            </time>
+          </header>
+          <div className="prose prose-lg max-w-none prose-ul:my-6 prose-ol:my-6 prose-li:my-0 prose-headings:my-6 prose-headings:font-title prose-p:font-body prose-li:font-body dark:prose-invert">
+            <MDXRemote
+              source={content}
+              components={components}
+              options={{
+                parseFrontmatter: true,
+                mdxOptions: {
+                  remarkPlugins: [],
+                  rehypePlugins: [],
+                  format: "mdx",
+                },
+              }}
+            />
+          </div>
+        </article>
+      </div>
     );
   } catch (error) {
     console.error("Error rendering blog post:", error);
