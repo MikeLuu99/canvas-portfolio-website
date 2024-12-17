@@ -61,6 +61,11 @@ const detailsData = {
       url: "https://x.com/mikmikkk6",
       logo: "https://about.twitter.com/content/dam/about-twitter/x/brand-toolkit/logo-black.png.twimg.1920.png",
     },
+    {
+      type: "Github",
+      url: "https://github.com/MikeLuu99",
+      logo: "https://cdn.pixabay.com/photo/2022/01/30/13/33/github-6980894_640.png",
+    },
   ],
 };
 
