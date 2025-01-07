@@ -23,6 +23,11 @@ const detailsData = {
       description: "Generate storyboards with Diffusion Model",
       url: "https://aistoryboard.streamlit.app/",
     },
+    {
+      name: "Groq AI Voice Agent",
+      description: "A voice agent using Groq API and LiveKit Cloud",
+      url: "https://github.com/MikeLuu99/groq-voice-agent",
+    },
   ],
   Education: [
     {
