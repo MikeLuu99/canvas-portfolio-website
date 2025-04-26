@@ -39,7 +39,7 @@ const initialNodes: Node[] = [
             AI
           </p>
           <hr className="my-4" />
-          <p>
+          {/* <p>
             Growing a startup in businees process automation with my brother at
             the moment (
             <a
@@ -51,6 +51,10 @@ const initialNodes: Node[] = [
               Mygrid
             </a>
             ), please fund us.
+          </p> */}
+          <p>
+            Please hire me, I&apos;ll bring you coffee everyday and fix your git
+            issues. I can also do massage and resolve merge conflicts.
           </p>
           <hr className="my-4" />
           <p>
