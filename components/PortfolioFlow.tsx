@@ -17,7 +17,7 @@ const NODE_POSITIONS = {
   Projects: { x: -0.9, y: 0 },
   Education: { x: 1.05, y: 0 },
   Experiences: { x: -0.9, y: 1 / 1.15 },
-  Contacts: { x: 1.05, y: 1 / 1.85 },
+  Links: { x: 1.05, y: 1 / 1.85 },
 } as const;
 
 const nodeTypes = {
@@ -112,11 +112,11 @@ const initialNodes: Node[] = [
               className="cursor-pointer underline mx-1"
               onClick={() =>
                 window.dispatchEvent(
-                  new CustomEvent("section-click", { detail: "Contacts" }),
+                  new CustomEvent("section-click", { detail: "Links" }),
                 )
               }
             >
-              Contacts
+              Links
             </span>
           </p>
         </>

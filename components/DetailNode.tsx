@@ -55,7 +55,7 @@ const detailsData = {
       logo: "https://media.licdn.com/dms/image/v2/C560BAQEMZ3PtWYiF3g/company-logo_200_200/company-logo_200_200/0/1642795447014/pac_dent_inc_logo?e=2147483647&v=beta&t=i5jS91rG6KRmxQMNQhaRotTX5Y0Cmgwetkmni3CTepU",
     },
   ],
-  Contacts: [
+  Links: [
     {
       type: "LinkedIn",
       url: "https://www.linkedin.com/in/mike-luu-117147253/",
@@ -70,6 +70,11 @@ const detailsData = {
       type: "Github",
       url: "https://github.com/MikeLuu99",
       logo: "https://cdn.pixabay.com/photo/2022/01/30/13/33/github-6980894_640.png",
+    },
+    {
+      type: "Resume",
+      url: "https://mikeluu.xyz/resume.pdf",
+      logo: "./resume.svg",
     },
   ],
 };
