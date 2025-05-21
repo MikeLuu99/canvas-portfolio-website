@@ -32,7 +32,7 @@ const detailsData = {
       name: "Doctor Sandie",
       description:
         "A real-time collaborative health challenges website with AI doctor.",
-      url: "doctor-sandie.mikeluu.xyz",
+      url: "https://doctor-sandie.mikeluu.xyz",
     },
   ],
   Education: [
