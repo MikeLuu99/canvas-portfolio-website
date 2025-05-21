@@ -28,6 +28,12 @@ const detailsData = {
       description: "A voice agent using Groq API and LiveKit Cloud",
       url: "https://github.com/MikeLuu99/groq-voice-agent",
     },
+    {
+      name: "Doctor Sandie",
+      description:
+        "A real-time collaborative health challenges website with AI doctor.",
+      url: "doctor-sandie.mikeluu.xyz",
+    },
   ],
   Education: [
     {

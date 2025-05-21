@@ -14,10 +14,10 @@ import DetailNode from "./DetailNode";
 
 const NODE_OFFSET = 400;
 const NODE_POSITIONS = {
-  Projects: { x: -0.9, y: 0 },
-  Education: { x: 1.05, y: 0 },
-  Experiences: { x: -0.9, y: 1 / 1.15 },
-  Links: { x: 1.05, y: 1 / 1.85 },
+  Education: { x: -0.9, y: 0 },
+  Links: { x: 1.05, y: 0 },
+  Projects: { x: -0.9, y: 0.55 },
+  Experiences: { x: 1.05, y: 0.75 },
 } as const;
 
 const nodeTypes = {
@@ -79,17 +79,6 @@ const initialNodes: Node[] = [
               className="cursor-pointer underline mx-1"
               onClick={() =>
                 window.dispatchEvent(
-                  new CustomEvent("section-click", { detail: "Projects" }),
-                )
-              }
-            >
-              Projects
-            </span>{" "}
-            |
-            <span
-              className="cursor-pointer underline mx-1"
-              onClick={() =>
-                window.dispatchEvent(
                   new CustomEvent("section-click", { detail: "Education" }),
                 )
               }
@@ -106,6 +95,17 @@ const initialNodes: Node[] = [
               }
             >
               Experiences
+            </span>{" "}
+            |
+            <span
+              className="cursor-pointer underline mx-1"
+              onClick={() =>
+                window.dispatchEvent(
+                  new CustomEvent("section-click", { detail: "Projects" }),
+                )
+              }
+            >
+              Projects
             </span>{" "}
             |
             <span
