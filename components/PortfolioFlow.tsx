@@ -1,13 +1,12 @@
 "use client";
 import { useCallback, useEffect } from "react";
 import ReactFlow, {
-  Node,
-  // Controls,
   Background,
   useNodesState,
   useEdgesState,
   BackgroundVariant,
 } from "reactflow";
+import type { Node } from "reactflow";
 import "reactflow/dist/style.css";
 import MainNode from "./MainNode";
 import DetailNode from "./DetailNode";
@@ -82,6 +81,16 @@ const initialNodes: Node[] = [
                   new CustomEvent("section-click", { detail: "Education" }),
                 )
               }
+              onKeyDown={(e) => {
+                if (e.key === "Enter" || e.key === " ") {
+                  window.dispatchEvent(
+                    new CustomEvent("section-click", { detail: "Education" }),
+                  );
+                }
+              }}
+              tabIndex={0}
+              role="button"
+              aria-label="Education"
             >
               Education
             </span>{" "}
@@ -93,6 +102,16 @@ const initialNodes: Node[] = [
                   new CustomEvent("section-click", { detail: "Experiences" }),
                 )
               }
+              onKeyDown={(e) => {
+                if (e.key === "Enter" || e.key === " ") {
+                  window.dispatchEvent(
+                    new CustomEvent("section-click", { detail: "Experiences" }),
+                  );
+                }
+              }}
+              tabIndex={0}
+              role="button"
+              aria-label="Experiences"
             >
               Experiences
             </span>{" "}
@@ -104,6 +123,16 @@ const initialNodes: Node[] = [
                   new CustomEvent("section-click", { detail: "Projects" }),
                 )
               }
+              onKeyDown={(e) => {
+                if (e.key === "Enter" || e.key === " ") {
+                  window.dispatchEvent(
+                    new CustomEvent("section-click", { detail: "Projects" }),
+                  );
+                }
+              }}
+              tabIndex={0}
+              role="button"
+              aria-label="Projects"
             >
               Projects
             </span>{" "}
@@ -115,6 +144,16 @@ const initialNodes: Node[] = [
                   new CustomEvent("section-click", { detail: "Links" }),
                 )
               }
+              onKeyDown={(e) => {
+                if (e.key === "Enter" || e.key === " ") {
+                  window.dispatchEvent(
+                    new CustomEvent("section-click", { detail: "Links" }),
+                  );
+                }
+              }}
+              tabIndex={0}
+              role="button"
+              aria-label="Links"
             >
               Links
             </span>
@@ -159,7 +198,7 @@ export default function PortfolioFlow() {
         return [...nds, newNode];
       });
     },
-    [setNodes],
+    [setNodes, setEdges],
   );
 
   const getNodePosition = (

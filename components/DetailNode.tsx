@@ -34,6 +34,12 @@ const detailsData = {
         "A real-time collaborative health challenges website with AI doctor.",
       url: "https://doctor-sandie.mikeluu.xyz",
     },
+    {
+      name: "Japanese Genki Vocab",
+      description:
+        "Astro website to practice all the main vocab in the Genki textbooks",
+      url: "https://genki-vocab.mikeluu.xyz",
+    },
   ],
   Education: [
     {
@@ -94,67 +100,81 @@ function DetailNode({ data }: { data: { section: string } }) {
         {data.section}
       </div>
       <ul className="pl-5 font-body text-black">
-        {details.map((detail, index) => (
-          <li key={index} className="text-xs mb-5">
-            {typeof detail === "string" ? (
-              detail
-            ) : "type" in detail ? (
-              <div className="flex items-center">
-                <a
-                  href={detail.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 hover:opacity-80"
-                >
+        {details.map((detail, index) => {
+          // Create a unique key based on content rather than index
+          const uniqueKey =
+            "type" in detail
+              ? `link-${detail.type}`
+              : "role" in detail
+                ? `exp-${detail.company}-${detail.role}`
+                : "name" in detail
+                  ? `proj-${detail.name}`
+                  : "degree" in detail
+                    ? `edu-${detail.school}-${detail.degree}`
+                    : `item-${index}`;
+
+          return (
+            <li key={uniqueKey} className="text-xs mb-5">
+              {typeof detail === "string" ? (
+                detail
+              ) : "type" in detail ? (
+                <div className="flex items-center">
+                  <a
+                    href={detail.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 hover:opacity-80"
+                  >
+                    <Image
+                      src={detail.logo}
+                      alt={detail.type}
+                      width={24}
+                      height={24}
+                      className="object-contain"
+                    />
+                    <span className="underline">{detail.type}</span>
+                  </a>
+                </div>
+              ) : "role" in detail ? (
+                <div className="flex items-center gap-2">
                   <Image
                     src={detail.logo}
-                    alt={detail.type}
+                    alt={detail.company}
                     width={24}
                     height={24}
                     className="object-contain"
                   />
-                  <span className="underline">{detail.type}</span>
+                  <span>
+                    {detail.role}, {detail.company}
+                  </span>
+                </div>
+              ) : "name" in detail ? (
+                <a
+                  href={detail.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:opacity-80"
+                >
+                  <span className="underline">{detail.name}</span>:{" "}
+                  {detail.description}
                 </a>
-              </div>
-            ) : "role" in detail ? (
-              <div className="flex items-center gap-2">
-                <Image
-                  src={detail.logo}
-                  alt={detail.company}
-                  width={24}
-                  height={24}
-                  className="object-contain"
-                />
-                <span>
-                  {detail.role}, {detail.company}
-                </span>
-              </div>
-            ) : "name" in detail ? (
-              <a
-                href={detail.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:opacity-80"
-              >
-                <span className="underline">{detail.name}</span>:{" "}
-                {detail.description}
-              </a>
-            ) : (
-              <div className="flex items-center gap-2">
-                <Image
-                  src={detail.logo}
-                  alt={detail.school}
-                  width={24}
-                  height={24}
-                  className="object-contain"
-                />
-                <span>
-                  {detail.degree}, {detail.school}, {detail.year}
-                </span>
-              </div>
-            )}
-          </li>
-        ))}
+              ) : (
+                <div className="flex items-center gap-2">
+                  <Image
+                    src={detail.logo}
+                    alt={detail.school}
+                    width={24}
+                    height={24}
+                    className="object-contain"
+                  />
+                  <span>
+                    {detail.degree}, {detail.school}, {detail.year}
+                  </span>
+                </div>
+              )}
+            </li>
+          );
+        })}
       </ul>
     </div>
   );
