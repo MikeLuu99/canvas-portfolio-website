@@ -43,10 +43,16 @@ const detailsData = {
   ],
   Education: [
     {
+      degree: "B.S in Applied and Computational Mathematics",
+      school: "University of Southern California",
+      year: "2027",
+      logo: "https://sportslogohistory.com/wp-content/uploads/2018/04/southern_california_trojans_1880-2015-w.png",
+    },
+    {
       degree: "B.S. in Computer Science",
       school: "Chapman University",
-      year: "2026",
-      logo: "https://yt3.googleusercontent.com/ytc/AIdro_k_MokCOiT2Cs6EQQ6pM8ZqWk5BlVCmdzkWLmB9qo3wxBE=s900-c-k-c0x00ffffff-no-rj",
+      year: "2025",
+      logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKtelhma20KapddOaYZ2pjEVu3B-uItkuVHA&s",
     },
     {
       degree: "s5 gaudmire",

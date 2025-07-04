@@ -34,8 +34,7 @@ const initialNodes: Node[] = [
       description: (
         <>
           <p>
-            Computer Science Student, interested in databases, automations, and
-            AI
+            Math and CS Student, interested in databases, automations, and AI
           </p>
           <hr className="my-4" />
           {/* <p>
