@@ -76,7 +76,7 @@ const detailsData = {
   Links: [
     {
       type: "LinkedIn",
-      url: "https://www.linkedin.com/in/mike-luu-117147253/",
+      url: "https://www.linkedin.com/in/mike-l%C6%B0u-117147253/",
       logo: "https://cdn-icons-png.flaticon.com/512/174/174857.png",
     },
     {
