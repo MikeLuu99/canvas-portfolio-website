@@ -15,7 +15,7 @@ const NODE_OFFSET = 400;
 const NODE_POSITIONS = {
   Education: { x: -0.9, y: 0 },
   Links: { x: 1.05, y: 0 },
-  Projects: { x: -0.9, y: 0.55 },
+  Projects: { x: -0.9, y: 0.7 },
   Experiences: { x: 1.05, y: 0.75 },
 } as const;
 
