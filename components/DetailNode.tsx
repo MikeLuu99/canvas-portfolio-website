@@ -91,7 +91,7 @@ const detailsData = {
     },
     {
       type: "Resume",
-      url: "https://mikeluu.xyz/resume.pdf",
+      url: "/resume.pdf",
       logo: "./resume.svg",
     },
   ],
