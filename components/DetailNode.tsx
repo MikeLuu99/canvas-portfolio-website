@@ -4,14 +4,20 @@ import Image from "next/image";
 const detailsData = {
   Projects: [
     {
+      name: "search-tui",
+      description: "a metadata search engine in your terminal in rust",
+      url: "https://crates.io/crates/search-tui",
+    },
+    {
+      name: "LLM Poker Arena",
+      description:
+        "AI poker tournament where multiple AI models compete in Texas Hold'em poker",
+      url: "https://github.com/MikeLuu99/llm-poker-arena",
+    },
+    {
       name: "Yboard",
       description: "A canvas for note-taking",
       url: "https://yboard.ai",
-    },
-    {
-      name: "Just Write",
-      description: "A focused text editor",
-      url: "https://justwrite.mikeluu.xyz",
     },
     {
       name: "Search shortcuts",
@@ -24,15 +30,15 @@ const detailsData = {
       url: "https://aistoryboard.streamlit.app/",
     },
     {
-      name: "Groq AI Voice Agent",
-      description: "A voice agent using Groq API and LiveKit Cloud",
-      url: "https://github.com/MikeLuu99/groq-voice-agent",
-    },
-    {
       name: "Doctor Sandie",
       description:
-        "A real-time collaborative health challenges website with AI doctor.",
+        "A real-time collaborative health challenges website with a Chapman famous Corgi.",
       url: "https://doctor-sandie.mikeluu.xyz",
+    },
+    {
+      name: "Just Write",
+      description: "A focused text editor",
+      url: "https://justwrite.mikeluu.xyz",
     },
     {
       name: "Japanese Genki Vocab",

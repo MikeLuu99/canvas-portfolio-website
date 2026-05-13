@@ -58,7 +58,7 @@ const initialNodes: Node[] = [
           <p>
             I explore math and film music sometimes. I also try{" "}
             <a
-              href="https://blog.mikeluu.xyz"
+              href="https://yappings.mikeluu.xyz"
               className="underline"
               target="_blank"
               rel="noopener noreferrer"
