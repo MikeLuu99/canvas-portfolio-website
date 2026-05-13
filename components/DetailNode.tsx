@@ -69,6 +69,11 @@ const detailsData = {
   ],
   Experiences: [
     {
+      role: "Research Intern",
+      company: "Korea University NLP&AI Lab",
+      logo: "https://upload.wikimedia.org/wikipedia/en/thumb/f/f6/Korea_University_Global_Symbol.svg/960px-Korea_University_Global_Symbol.svg.png",
+    },
+    {
       role: "Undergraduate Researcher",
       company: "Chapman University ESSDSL",
       logo: "https://yt3.googleusercontent.com/ytc/AIdro_k_MokCOiT2Cs6EQQ6pM8ZqWk5BlVCmdzkWLmB9qo3wxBE=s900-c-k-c0x00ffffff-no-rj",

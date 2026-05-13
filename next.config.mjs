@@ -1,4 +1,5 @@
 import createMDX from "@next/mdx";
+import { hostname } from "node:os";
 
 const withMDX = createMDX({
   options: {
@@ -11,6 +12,10 @@ const withMDX = createMDX({
 const nextConfig = {
   images: {
     remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "upload.wikimedia.org",
+      },
       {
         protocol: "https",
         hostname: "**.googleusercontent.com",
